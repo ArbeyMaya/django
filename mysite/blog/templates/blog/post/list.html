@@ -5,8 +5,26 @@
 
 {% block content %}
 
+{% comment %} menu inicio {% endcomment %}
+<nav class="text-center">
+  <div class="d-flex justify-content-between">
+    <div>
+      <button class="btn pt-4 btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-list btn-menu" style="color: white; font-size: 2rem;"></i></button>
+    </div>
+    <div class="">
+      <a class="navbar-brand titulo-principal">My Blog</a>
+    </div>
+    <div class="pt-4">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+{% comment %} menu- fin {% endcomment %}
+
 {% comment %} card {% endcomment %}
-  <h1 class="text-center p-4">My Blog</h1>
 {% if tag %}
   <h2>Posts tagged with "{{ tag.name }}"</h2>
 {% endif %}
